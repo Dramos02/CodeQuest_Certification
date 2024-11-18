@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.certificate-container {
+    background-color: #fff;
+    border: 10px solid #1e6091;
+    border-radius: 15px;
+    width: 1123px; /* A4 Landscape width */
+    height: 794px; /* A4 Landscape height */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+.certificate-header {
+    color: #1e6091;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.certificate-subheader {
+    color: #ff7b00;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.certificate-body {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.certificate-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.certificate-recipient {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+
+.certificate-type {
+    font-size: 20px;
+    font-style: italic;
+    margin: 10px 0;
+    color: #0056b3;
+}
+
+.certificate-footer {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.print-btn {
+    background-color: #1e6091;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.print-btn:hover {
+    background-color: #144e75;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .certificate-container {
+        width: 100%;
+        height: 100%;
+        border: 10px solid #1e6091; /* Keep the border */
+        border-radius: 15px;
+        background-color: #fff; /* Keep the background color */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Keep the box shadow */
+    }
+
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+
+    /* Hide print button, dropdown, and label during print */
+    .print-btn, #certificateSelect, label[for="certificateSelect"] {
+        display: none;
+    }
+}

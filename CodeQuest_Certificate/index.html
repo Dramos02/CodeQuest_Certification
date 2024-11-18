@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quest Certification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="certificate-container" id="certificate">
+        <div class="certificate-header">Code Quest: The PyTome of Knowledge</div>
+        <div class="certificate-subheader">A Mobile Game-Based Approach to Learning Python</div>
+
+        <div class="certificate-body">
+            <p>This certificate is proudly presented to:</p>
+            <div class="certificate-recipient" id="recipientName">[Recipient's Name]</div>
+            
+            <div class="certificate-title" id="certificateTitle">Beginner/Fundamentals of Python Certificate</div>
+            
+            <p class="certificate-type" id="certificateType">For demonstrating mastery of Python fundamentals.</p>
+
+            <div class="certificate-footer">
+                <p>Presented by New Era University</p>
+                <p>Date of Completion: <span id="completionDate"></span></p>
+            </div>
+        </div>
+
+        <!-- Cert Type -->
+        <label for="certificateSelect">Choose Certificate Type:</label>
+        <select id="certificateSelect" onchange="updateCertificate()">
+            <option value="Beginner">Beginner/Fundamentals of Python Certificate</option>
+            <option value="Intermediate">Intermediate/Intermediate Python Certificate</option>
+        </select>
+
+        <!-- Print btn -->
+        <button class="print-btn" onclick="printCertificate()">Print Certificate</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
