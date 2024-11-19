@@ -20,3 +20,22 @@ document.getElementById('completionDate').textContent = new Date().toLocaleDateS
 function printCertificate() {
     window.print();
 }
+
+function shareOnLinkedIn() {
+    // Certificate details
+    const recipientName = document.getElementById("recipientName").innerText;
+    const certificateTitle = document.getElementById("certificateTitle").innerText;
+    const completionDate = document.getElementById("completionDate").innerText;
+
+    // Custom message for sharing
+    const shareText = `I am proud to share that I have earned the ${certificateTitle} presented by New Era University through Code Quest: The PyTome of Knowledge. Completed on ${completionDate}.`;
+
+    // URL of the certification page or game (replace with your actual URL)
+    const pageUrl = "https://dramos02.github.io/CodeQuest_Certification/index.html";
+
+    // LinkedIn share URL
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(shareText)}`;
+
+    // Open the LinkedIn share URL in a new tab
+    window.open(linkedInShareUrl, "_blank");
+}
